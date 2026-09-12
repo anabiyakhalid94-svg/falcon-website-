@@ -1,0 +1,14 @@
+/* Falcon cinematic hero background - exact user supplied artwork */
+.hero-art.falcon-cinematic {position:relative!important;height:540px!important;overflow:hidden!important;display:block!important;perspective:none!important;background:#020914!important}
+.hero-art.falcon-cinematic .cinematic-image {position:absolute;inset:0;background-image:url("data:image/png;base64,PLACEHOLDER");background-size:cover;background-position:center center;background-repeat:no-repeat;transform:scale(1.015);animation:falconCamera 22s ease-in-out infinite alternate;will-change:transform}
+.hero-art.falcon-cinematic::after {content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(2,9,20,.15) 0%,rgba(2,9,20,0) 48%,rgba(2,9,20,.05) 100%)}
+.hero-art.falcon-cinematic .light-sweep {position:absolute;inset:-20%;pointer-events:none;background:linear-gradient(105deg,transparent 38%,rgba(120,200,255,.08) 48%,rgba(255,214,130,.10) 50%,transparent 62%);transform:translateX(-75%);animation:falconSweep 11s ease-in-out infinite;mix-blend-mode:screen}
+.hero-art.falcon-cinematic .glow-breathe {position:absolute;width:55%;aspect-ratio:1;right:7%;top:10%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(50,170,255,.11),transparent 67%);filter:blur(12px);animation:falconBreathe 7s ease-in-out infinite;mix-blend-mode:screen}
+.hero-art.falcon-cinematic .stars {position:absolute;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(circle at 66% 27%,rgba(255,255,255,.8) 0 1px,transparent 1.5px),radial-gradient(circle at 78% 61%,rgba(110,200,255,.7) 0 1px,transparent 1.5px),radial-gradient(circle at 56% 73%,rgba(255,220,140,.55) 0 1px,transparent 1.5px),radial-gradient(circle at 88% 35%,rgba(255,255,255,.65) 0 1px,transparent 1.5px);animation:falconStars 18s linear infinite alternate}
+@keyframes falconCamera{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.075) translate3d(-.7%,-.4%,0)}}
+@keyframes falconSweep{0%,18%{transform:translateX(-75%)}62%,100%{transform:translateX(75%)}}
+@keyframes falconBreathe{0%,100%{transform:scale(.92);opacity:.35}50%{transform:scale(1.08);opacity:.7}}
+@keyframes falconStars{from{transform:translate3d(0,0,0)}to{transform:translate3d(-7px,4px,0)}}
+@media(max-width:850px){.hero-art.falcon-cinematic{height:450px!important}}
+@media(max-width:560px){.hero-art.falcon-cinematic{height:370px!important}}
+@media(prefers-reduced-motion:reduce){.hero-art.falcon-cinematic .cinematic-image,.hero-art.falcon-cinematic .light-sweep,.hero-art.falcon-cinematic .glow-breathe,.hero-art.falcon-cinematic .stars{animation:none!important}}
