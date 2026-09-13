@@ -1,0 +1,1 @@
+export default function SectionHeader({eyebrow,title,text,light=false,align='center'}){return <div className={`section-header ${align==='left'?'align-left':''} ${light?'light':''}`}><div className="eyebrow"><span/>{eyebrow}</div><h2 dangerouslySetInnerHTML={{__html:title}}/>{text&&<p>{text}</p>}</div>}
